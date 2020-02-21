@@ -1064,39 +1064,126 @@
 //     }
 // }        
 //6
-//6.1
-let task=[
-    t0={
-      name: "HTML",
-      Complete: false
-    },
-    t1={
-        name: "CSS",
-        Complete: false 
-    },
-    t2={
-        name: "Basics of JavaScript",
-        Complete: false 
-    },
-    t3={
-        name: "Node Package Manager (npm)",
-        Complete: false 
-    },
-    t4={
-        name: "Git",
-        Complete: false
-    }
-]
-//6.2
-a=prompt("Enter your command (New, Delete, Update, Complete)").toLowerCase();
-if (a=="new"){
-    nt=prompt("Enter new task:");
-    tn={name: nt, Complete: false}
-    task.push(tn);
-}
-console.log(task);
-
-
-
-
+// let tasks=[
+//     t0={
+//       name: "HTML",
+//       Complete: false
+//     },
+//     t1={
+//         name: "CSS",
+//         Complete: false 
+//     },
+//     t2={
+//         name: "Basics of JavaScript",
+//         Complete: false 
+//     },
+//     t3={
+//         name: "Node Package Manager (npm)",
+//         Complete: false 
+//     },
+//     t4={
+//         name: "Git",
+//         Complete: false
+//     }
+// ]
+// //6.1
+// console.log("Hi there, this is your learning tasks to front-end developer career:");
+// for (let i=0;i<tasks.length;i++){
+//     console.log((i+1)+". "+tasks[i].name)
+//     console.log('   Complete: '+tasks[i].Complete);
+// }
+// console.log('-----------------------------------')
+// //6.2
+// for (let i=0;i<3;i++){
+// a=prompt("Enter your command (New, Delete, Update, Complete)").toLowerCase();
+// if (a=="new"){
+//     nt=prompt("Enter new task:");
+//     tn={name: nt, Complete: false}
+//     tasks.push(tn);
+// }
+// //6.3
+// else if (a=="update"){
+//     let udPos=Number(prompt("Enter position:"))-1;
+//     let udCon=prompt("Enter new title:");
+//     tasks[udPos].name=udCon;
+// }
+// //6.4
+// else if (a=="complete"){
+//     let cePos=Number(prompt("Enter position:"))-1
+//     tasks[cePos].Complete=true;
+// }
+// //6.5
+// else if (a=="delete"){
+//     let delPos=Number(prompt("Enter position:"))-1;
+//     tasks.splice(delPos,1);
+// }
+// //6.6
+// console.clear();
+// console.log("Hi there, this is your learning tasks to front-end developer career:");
+// for (let i=0;i<tasks.length;i++){
+//     name=tasks[i].name
+//     if (tasks[i].Complete==true)
+//         name='[x]'+name;
+//     else
+//         name='[ ]'+name;
+//     console.log((i+1)+". "+name);
+// }
+// console.log('-----------------------------------');
+// }
+//7
+// clear()
+// setshape('rocket');
+// const pos={
+//   x: 100,
+//   y: 50,
+// }
+// penup();
+// rt(90)
+// fd(pos.x)
+// lt(90);
+// fd(pos.y)
+//8
+// clear()
+// setshape('rocket');
+// const pos={
+//   x: 100,
+//   y: 50,
+//   width: 20,
+// }
+// penup();
+// rt(90)
+// fd(pos.x)
+// lt(90);
+// fd(pos.y)
+// pendown()
+// for (let i=0;i<4;i++){
+//   fd(pos.width);
+//   rt(90);
+// }
+//9
+// clear()
+// setshape('rocket');
+// const pos={
+//   x: 100,
+//   y: 50,
+//   width: 20,
+//   height: 40,
+// }
+// penup();
+// rt(90)
+// fd(pos.x)
+// lt(90);
+// fd(pos.y)
+// pendown()
+// for (let i=0;i<4;i++){
+//   if (i%2!=0){
+//   	fd(pos.width);
+//   	rt(90);
+//   }
+//   else{
+//     fd(pos.height);
+//     rt(90);
+// }
+// }
+//
 
