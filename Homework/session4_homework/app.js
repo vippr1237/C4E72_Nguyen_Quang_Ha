@@ -993,42 +993,110 @@
 //     devdictionary[kw]=newdef;
 // }
 //5
-let products=[
-    p1= {
-        name: "Xiaomi protable charger 20000mah",
-        brand: "Xiami",
-        price: "428",
-        color: "White",
-        category: "Charger"
+// let products=[
+//     p1= {
+//         name: "Xiaomi protable charger 20000mah",
+//         brand: "Xiami",
+//         price: "428",
+//         color: "White",
+//         category: "Charger"
+//     },
+//     p2= {
+//         name: "VSmart Active 1",
+//         brand: "VSmart",
+//         price: "5487",
+//         color: "Black",
+//         category: "Phone"
+//     },
+//     p3= {
+//         name: "Iphone X",
+//         brand: "Apple",
+//         price: "21490",
+//         color: "Gray",
+//         category: "Phone"
+//     },
+//     p4= {
+//         name: "Samsung Galaxy A9",
+//         brand: "Samsung",
+//         price: "8490",
+//         color: "Blue",
+//         category: "Phone"
+//     }
+// ]
+
+//5.2
+// a=Number(prompt("Enter product position:"))-1;
+// console.clear();
+// show=products[a];
+// for (let x in show){
+//     console.log(x,":",show[x]);
+// }
+//5.3
+// a=prompt("Enter your category:").toLowerCase();
+// console.clear();
+// for (let i=0;i<products.length;i++){
+//     if (products[i].category.toLowerCase()==a){
+//         console.log("#"+(i+1)+'. '+products[i].name);
+//         console.log('    Price:'+products[i].price);
+//         console.log("-------------------------------")
+//     }
+// }
+//5.4
+// products[0].providers=["Phukienzero", "Dientuccc"];
+// products[1].providers=["Tgdd", "Ddghn", "Vhstore"];
+// products[2].providers=["Tgdd"];
+// products[3].providers=["Tgdd"];
+// for (let i=0;i<products.length;i++){
+//     console.log("#"+(i+1)+'. '+products[i].name);
+//     console.log('    Price: '+products[i].price);
+//     console.log('    Provider: '+products[i].providers)
+//     console.log("-------------------------------")
+// }
+//5.5
+// a=prompt("Enter provider:")
+// console.clear();
+// for (let i=0;i<products.length;i++){
+//     if (products[i].providers.indexOf(a)!=-1){
+//         show=products[i];
+//         for (let x in show){
+//             console.log(x,":",show[x]);
+//         }   
+//     }
+// }        
+//6
+//6.1
+let task=[
+    t0={
+      name: "HTML",
+      Complete: false
     },
-    p2= {
-        name: "VSmart Active 1",
-        brand: "VSmart",
-        price: "5487",
-        color: "Black",
-        category: "Phone"
+    t1={
+        name: "CSS",
+        Complete: false 
     },
-    p3= {
-        name: "Iphone X",
-        brand: "Apple",
-        price: "21490",
-        color: "Gray",
-        category: "Phone"
+    t2={
+        name: "Basics of JavaScript",
+        Complete: false 
     },
-    p4= {
-        name: "Samsung Galaxy A9",
-        brand: "Samsung",
-        price: "8490",
-        color: "Blue",
-        category: "Phone"
+    t3={
+        name: "Node Package Manager (npm)",
+        Complete: false 
+    },
+    t4={
+        name: "Git",
+        Complete: false
     }
 ]
-for (let i=0;i<products.length;i++){
-    console.log("#"+(i+1)+'. '+products[i].name);
-    console.log('    Price:'+products[i].price);
-    console.log("-------------------------------")
+//6.2
+a=prompt("Enter your command (New, Delete, Update, Complete)").toLowerCase();
+if (a=="new"){
+    nt=prompt("Enter new task:");
+    tn={name: nt, Complete: false}
+    task.push(tn);
 }
-a=prompt("Enter product position:");
-console.log(products[a]);
+console.log(task);
+
+
+
 
 
