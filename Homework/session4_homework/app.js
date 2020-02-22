@@ -1282,4 +1282,24 @@
 //   }
 // }
 // }
+//11
+// clear();
+// const circle = {
+// 	shape: 'circle',
+// 	x: 100,
+// 	y: 50,
+// 	radius: 30,
+// }
+// penup();
+// rt(90);
+// fd(circle.x);
+// lt(90);
+// fd(circle.y);
+// fd(30)
+// rt(90)
+// pendown();
+// for (let i=0;i<100;i++){
+//   fd(circle.radius/30)
+//   rt(360/100);
+// }
 
