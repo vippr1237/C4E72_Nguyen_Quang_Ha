@@ -977,20 +977,24 @@
 //     ui: "UI mean User Interface, UX mean User Experience, are the process to define how your products looks and feels",
 //     ux: "UI mean User Interface, UX mean User Experience, are the process to define how your products looks and feels"
 // }
-// //4.1+4.2
+// 4.1+4.2
 // for (let i=0;i<2;i++){
 // alert("Hi there, this is dev dictionary");
 // let kw=prompt("Enter a keyword");
 // let cal=0;
 // for (let x in devdictionary){
-//     if (kw==x){
-//         alert(`${x}\n${devdictionary[x]}`)
-//         cal++
+//     if (kw==x){        
+//         cal++;
+//         alert(`${x}\n${devdictionary[x]}`);
 //     }
 // }
-// if (cal==0)
-//     newdef=prompt(`We couldn't find your word: ${kw}, leave your explaination`);
+// if (cal==0){
+//     let newdef=prompt(`We couldn't find your word: ${kw}, leave your explaination`);
 //     devdictionary[kw]=newdef;
+// }
+// }
+// else{
+//   alert(`${x}\n${devdictionary[x]}`)
 // }
 //5
 // let products=[
@@ -1024,7 +1028,7 @@
 //     }
 // ]
 
-//5.2
+// 5.2
 // a=Number(prompt("Enter product position:"))-1;
 // console.clear();
 // show=products[a];
@@ -1053,10 +1057,11 @@
 //     console.log("-------------------------------")
 // }
 //5.5
-// a=prompt("Enter provider:")
+// a=prompt("Enter provider:").toLowerCase();
 // console.clear();
 // for (let i=0;i<products.length;i++){
-//     if (products[i].providers.indexOf(a)!=-1){
+//     let product=products[i].providers.map(x => x.toLowerCase())
+//     if (product.indexOf(a)!=-1){
 //         show=products[i];
 //         for (let x in show){
 //             console.log(x,":",show[x]);
@@ -1303,137 +1308,137 @@
 //   rt(360/100);
 // }
 //12
-clear();
-const cmds = [
-    {
-        shape: 'circle',
-        x: 0,
-        y: -20,
-        radius: 60,
-    },
-    {
-        shape: 'circle',
-        x: 0,
-        y: 80,
-        radius: 40,
-    },
-    {
-        shape: 'circle',
-        x: -75,
-        y: 10,
-        radius: 20,
-    },
-      {
-        shape: 'circle',
-        x: 75,
-        y: 10,
-        radius: 20,
-    },
-    {
-        shape: 'square',
-        x: -65,
-        y: -100,
-        width: 30,
-    },
-      {
-        shape: 'square',
-        x: 38,
-        y: -100,
-        width: 30,
-    },
+// clear();
+// const cmds = [
+//     {
+//         shape: 'circle',
+//         x: 0,
+//         y: -20,
+//         radius: 60,
+//     },
+//     {
+//         shape: 'circle',
+//         x: 0,
+//         y: 80,
+//         radius: 40,
+//     },
+//     {
+//         shape: 'circle',
+//         x: -75,
+//         y: 10,
+//         radius: 20,
+//     },
+//       {
+//         shape: 'circle',
+//         x: 75,
+//         y: 10,
+//         radius: 20,
+//     },
+//     {
+//         shape: 'square',
+//         x: -65,
+//         y: -100,
+//         width: 30,
+//     },
+//       {
+//         shape: 'square',
+//         x: 38,
+//         y: -100,
+//         width: 30,
+//     },
   
-  {
-        shape: 'rect',
-        x: -30,
-        y: 80,
-        width: 20,
-        height: 4
-    },
-    {
-        shape: 'rect',
-        x: 10,
-        y: 80,
-        width: 20,
-        height: 4
-    },
-      {
-        shape: 'rect',
-        x: -10,
-        y: 50,
-        width: 20,
-        height: 6
-    },
-  {
-        shape: 'square',
-        x: 500,
-        y: 500,
-        width: 20,
-    },
-]
-function draw(x,y){
-penup();
-if (x>0 && y>0){
-rt(90);
-fd(x);
-lt(90);
-fd(y);
-}
-else if (x>0 && y<0){
-rt(90);
-fd(x);
-rt(90);
-fd(-y);
-}
-else if (x<0 && y>0){
-lt(90);
-fd(-x);
-rt(90);
-fd(y);
-}
-else{
-lt(90);
-fd(-x);
-lt(90);
-fd(-y);
-}
-pendown();
-}
-function circle(radius){
-  penup()
-  fd(radius);
-  rt(90);
-  pendown()
-for (let i=0;i<100;i++){
-  fd(radius/15)
-  rt(360/100);
-}
-}
-function square(width){
-  for (let i=0;i<4;i++){
-   fd(width);
-    rt(90);
-}
-}
-function rect(width,height){
-  for (let j=0;j<4;j++){
-	if (j%2!=0){
-      fd(width);
-      rt(90);
-}
-	else{
- 	fd(height);
-      rt(90);
-}
-}
-}
-for (let i=0;i<cmds.length;i++){
-  home()
-  draw(cmds[i].x,cmds[i].y)
-  if (cmds[i].shape=="circle")
-    circle(cmds[i].radius);
-  else if(cmds[i].shape=="square")
-    square(cmds[i].width);
-  else if(cmds[i].shape=="rect")
-    rect(cmds[i].width,cmds[i].height);
-}
+//   {
+//         shape: 'rect',
+//         x: -30,
+//         y: 80,
+//         width: 20,
+//         height: 4
+//     },
+//     {
+//         shape: 'rect',
+//         x: 10,
+//         y: 80,
+//         width: 20,
+//         height: 4
+//     },
+//       {
+//         shape: 'rect',
+//         x: -10,
+//         y: 50,
+//         width: 20,
+//         height: 6
+//     },
+//   {
+//         shape: 'square',
+//         x: 500,
+//         y: 500,
+//         width: 20,
+//     },
+// ]
+// function draw(x,y){
+// penup();
+// if (x>0 && y>0){
+// rt(90);
+// fd(x);
+// lt(90);
+// fd(y);
+// }
+// else if (x>0 && y<0){
+// rt(90);
+// fd(x);
+// rt(90);
+// fd(-y);
+// }
+// else if (x<0 && y>0){
+// lt(90);
+// fd(-x);
+// rt(90);
+// fd(y);
+// }
+// else{
+// lt(90);
+// fd(-x);
+// lt(90);
+// fd(-y);
+// }
+// pendown();
+// }
+// function circle(radius){
+//   penup()
+//   fd(radius);
+//   rt(90);
+//   pendown()
+// for (let i=0;i<100;i++){
+//   fd(radius/30)
+//   rt(360/100);
+// }
+// }
+// function square(width){
+//   for (let i=0;i<4;i++){
+//    fd(width);
+//     rt(90);
+// }
+// }
+// function rect(width,height){
+//   for (let j=0;j<4;j++){
+// 	if (j%2!=0){
+//       fd(width);
+//       rt(90);
+// }
+// 	else{
+//  	fd(height);
+//       rt(90);
+// }
+// }
+// }
+// for (let i=0;i<cmds.length;i++){
+//   home()
+//   draw(cmds[i].x,cmds[i].y)
+//   if (cmds[i].shape=="circle")
+//     circle(cmds[i].radius);
+//   else if(cmds[i].shape=="square")
+//     square(cmds[i].width);
+//   else if(cmds[i].shape=="rect")
+//     rect(cmds[i].width,cmds[i].height);
+// }
 
