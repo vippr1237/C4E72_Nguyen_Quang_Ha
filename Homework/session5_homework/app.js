@@ -78,17 +78,17 @@ function khaBanh(string){
         if (i==0){
             kBstyle+=string[i].toUpperCase();
         }
-        else if (string[i-1]===string[i-1].toLowerCase() && string[i-1]!==' '){
+        else if (kBstyle[i-1]===kBstyle[i-1].toLowerCase() && kBstyle[i-1]!==' '){
             kBstyle+=string[i].toUpperCase();
         }
-        else if (string[i-1]===string[i-1].toUpperCase() && string[i-1]!==' '){
+        else if (kBstyle[i-1]===kBstyle[i-1].toUpperCase() && kBstyle[i-1]!==' '){
             kBstyle+=string[i].toLowerCase();
         }
-        else if (string[i-1]===' '){
-            if (string[i-2]===string[i-2].toLowerCase()){
+        else if (kBstyle[i-1]===' '){
+            if (kBstyle[i-2]===kBstyle[i-2].toLowerCase()){
                 kBstyle+=string[i].toUpperCase();
             }
-            else if (string[i-2]===string[i-2].toUpperCase()){
+            else if (kBstyle[i-2]===kBstyle[i-2].toUpperCase()){
                 kBstyle+=string[i].toLowerCase();
             }
         }
