@@ -1,0 +1,25 @@
+html{
+    font-family: 'Odibee Sans',Arial, Helvetica, sans-serif;
+
+}
+#title{
+    color: red;
+}
+.fs-20{
+    font-size:20px;
+
+}
+.blue-text{
+    color: blue;
+}
+.bg-green{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    margin: 10px;
+    border: crimson 10px solid;
+}
+
+/* css: flexbox
+source: csstrick */

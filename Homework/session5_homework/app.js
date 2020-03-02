@@ -71,31 +71,31 @@
 // }
 // console.log(mapLetters("dodo"));
 // 5 KhA bAnH wOrDs
-function khaBanh(string){
-    let kBstyle='';
-    console.log(string)
-    for (let i=0;i<string.length;i++){
-        if (i==0){
-            kBstyle+=string[i].toUpperCase();
-        }
-        else if (kBstyle[i-1]===kBstyle[i-1].toLowerCase() && kBstyle[i-1]!==' '){
-            kBstyle+=string[i].toUpperCase();
-        }
-        else if (kBstyle[i-1]===kBstyle[i-1].toUpperCase() && kBstyle[i-1]!==' '){
-            kBstyle+=string[i].toLowerCase();
-        }
-        else if (kBstyle[i-1]===' '){
-            if (kBstyle[i-2]===kBstyle[i-2].toLowerCase()){
-                kBstyle+=string[i].toUpperCase();
-            }
-            else if (kBstyle[i-2]===kBstyle[i-2].toUpperCase()){
-                kBstyle+=string[i].toLowerCase();
-            }
-        }
-    }
-    return kBstyle;
-}
-console.log(khaBanh("Kha Banh xin chao moi nguoi"));
+// function khaBanh(string){
+//     let kBstyle='';
+//     console.log(string)
+//     for (let i=0;i<string.length;i++){
+//         if (i==0){
+//             kBstyle+=string[i].toUpperCase();
+//         }
+//         else if (kBstyle[i-1]===kBstyle[i-1].toLowerCase() && kBstyle[i-1]!==' '){
+//             kBstyle+=string[i].toUpperCase();
+//         }
+//         else if (kBstyle[i-1]===kBstyle[i-1].toUpperCase() && kBstyle[i-1]!==' '){
+//             kBstyle+=string[i].toLowerCase();
+//         }
+//         else if (kBstyle[i-1]===' '){
+//             if (kBstyle[i-2]===kBstyle[i-2].toLowerCase()){
+//                 kBstyle+=string[i].toUpperCase();
+//             }
+//             else if (kBstyle[i-2]===kBstyle[i-2].toUpperCase()){
+//                 kBstyle+=string[i].toLowerCase();
+//             }
+//         }
+//     }
+//     return kBstyle;
+// }
+// console.log(khaBanh("Kha Banh xin chao moi nguoi"));
 //6 Censored String
 // function censoredString(string){
 //     arr=['u','e','o','a','i']
