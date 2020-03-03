@@ -1,0 +1,60 @@
+#p1{
+    color: green;
+}
+.lo{
+    color: blue;
+
+}
+#mid{
+    background-color: wheat;
+    /*code vào phần bên dưới*/
+    color: green;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:30px;
+  }
+#border{
+    width: 200px;
+    height:200px;
+    background:wheat;
+    font-size:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid blue;
+    border-radius: 12%;   
+}
+#padd{
+    background: wheat;
+    width: 400px;
+    border: 2px solid green;
+    padding: 45px 40px;
+}
+#a >div{
+    background-color: wheat;
+    margin: 50px 40px 50px 60px;
+}
+#a{
+    border:1px solid black;
+}
+#bl{
+    background: red;
+    display: inline;
+}
+#di{
+    background:blue;
+}
+#inbl{
+    background: red;
+    display: inline-block;
+    width: 100%;
+}
+#span1{
+    background: red;
+}
+#span2{
+    background:yellow;
+    width:500px;
+    display:inline-block;
+}
