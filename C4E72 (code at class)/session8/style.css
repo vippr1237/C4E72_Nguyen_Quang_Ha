@@ -1,0 +1,16 @@
+#button{
+    float: right;
+    border:none;
+}
+body{
+    height: 600px;
+}
+#flex{
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#author{
+    text-align: end;
+}
