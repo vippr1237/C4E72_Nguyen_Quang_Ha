@@ -1,0 +1,20 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.margin{
+    margin-left: 3px;
+}
+table, th ,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+#add-container{
+    display: flex;
+    margin-bottom: 20px;
+}
+.alo{
+    margin-right: 10px;
+}
