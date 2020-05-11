@@ -66,13 +66,13 @@ tbody.innerHTML="";
 timeSheetData.forEach(addContent);
 add.addEventListener("click",addNew)
 
-function addContent(item){
+function addContent(item,index){
 tbody.innerHTML+=`
     <tr>
     <td>${item['project']}</td>
     <td>${item['task']}</td>
     <td>${item["timeSpent"]}</td>
-    <td><button id="action">x</button></td>
+    <td><button onclick="removeLine(${index})">x</button></td>
     </tr>`
 }
 function addNew(){
@@ -80,6 +80,11 @@ function addNew(){
     task: newTask.value,
     "timeSpent": Number(newTimeSpent.value)})
     addContent(timeSheetData[timeSheetData.length-1])
+}
+function removeLine(index){
+    timeSheetData.splice(index,1);
+    tbody.innerHTML="";
+    timeSheetData.forEach(addContent);
 }
 
 
